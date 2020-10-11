@@ -1,0 +1,52 @@
+[debug] [2020-10-11T13:10:16.113Z] ----------------------------------------------------------------------
+[debug] [2020-10-11T13:10:16.116Z] Command:       C:\laragon\bin\nodejs\node-v12\node.exe C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-10-11T13:10:16.116Z] CLI Version:   8.11.2
+[debug] [2020-10-11T13:10:16.116Z] Platform:      win32
+[debug] [2020-10-11T13:10:16.116Z] Node Version:  v12.2.0
+[debug] [2020-10-11T13:10:16.118Z] Time:          Sun Oct 11 2020 13:10:16 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-10-11T13:10:16.118Z] ----------------------------------------------------------------------
+[debug] [2020-10-11T13:10:16.118Z] 
+[debug] [2020-10-11T13:10:16.181Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-11T13:10:16.181Z] > authorizing via signed-in user
+[debug] [2020-10-11T13:10:16.182Z] [iam] checking project theday-a50b5 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-10-11T13:10:16.184Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-11T13:10:16.184Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-11T13:10:16.657Z] <<< HTTP RESPONSE 200 {"date":"Sun, 11 Oct 2020 13:10:16 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-11T13:10:16.730Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/theday-a50b5:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2020-10-11T13:10:18.320Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 11 Oct 2020 13:10:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=659","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-11T13:10:18.323Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project theday-a50b5:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasedatabase.instances.update
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2020-10-11T13:10:18.324Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/theday-a50b5  
+ 
+[debug] [2020-10-11T13:10:18.970Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sun, 11 Oct 2020 13:10:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-11T13:10:18.970Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-10-11T13:10:18.973Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-10-11T13:10:19.402Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:196:13)
+    at Request.EventEmitter.emit (domain.js:471:20)
+    at Request.<anonymous> (C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:196:13)
+    at Request.EventEmitter.emit (domain.js:471:20)
+    at IncomingMessage.<anonymous> (C:\laragon\bin\nodejs\node-v12\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:284:20)
+    at IncomingMessage.emit (events.js:201:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:471:20)
+    at endReadableNT (_stream_readable.js:1130:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:9)
+[error] 
+[error] Error: Failed to get Firebase project theday-a50b5. Please make sure the project exists and your account has permission to access it.
